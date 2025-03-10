@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout da Página</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Texto acima do menu -->
+    <div class="barra-rosa">
+        <span class="texto-esquerda">Hai bisogno di aiuto?</span>
+        <span class="texto-centralizado">Ottieni subito uno sconto del 10%:Iscriviti alla newsletter</span>
+        <span class="texto-direita">Informazioni di consegna</span>
+    </div>    
+    
+    <!-- Menu com imagem, dropdown e ícones -->
+    <header>
+        <nav class="menu-horizontal">
+            <div class="logo">
+                <img src="assets/image/logo.png" alt="Logo">
+            </div>
+            <!-- Botão hambúrguer para dispositivos móveis -->
+            <button class="botao-hamburguer" onclick="toggleHamburgerMenu()">☰</button>
+            <ul class="menu-itens">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#categorie" id="categorie-link">Categorie <span class="toggle-icon">\/</span></a>
+                    <ul class="submenu">
+                        <li><a href="#sub2">Fofinho</a></li>
+                        <li><a href="#sub1">Fofo</a></li>
+                        <li><a href="#sub3">Fofão</a></li>
+                    </ul>
+                </li>
+                <li><a href="#novita">Novità</a></li>
+                <li><a href="#marchi">Marchi</a></li>
+                <li><a href="#carte-regalo">Carte Regalo</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+            </ul>
+            <div class="icones-menu">
+                <img src="assets/image/icones.png" alt="Pesquisar">
+            </div>
+            <button class="botao-azul">Acquista ora</button>
+        </nav>
+    </header>
+    
+
+    <!-- Imagem grande -->
+    <section class="imagem-grande">
+        <img src="assets/image/img_2.jpeg" alt="Imagem grande" style="--img-height: 592px;">
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+    <!-- Chamada do arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

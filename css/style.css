@@ -1,0 +1,250 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Barra rosa */
+.barra-rosa {
+    background-color: #F0DACD;
+    display: flex; /* Usamos flexbox para alinhar os elementos */
+    justify-content: space-between; /* Espaça os textos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px; /* Espaçamento interno da barra */
+    gap: 10px; /* Espaçamento entre os textos (opcional) */
+}
+
+/* Texto alinhado à esquerda */
+.texto-esquerda {
+    margin-left: 20px; /* Margem da esquerda para o centro da tela */
+    text-align: left;
+    white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+}
+
+/* Texto centralizado */
+.texto-centralizado {
+    text-align: center;
+    flex-grow: 1; /* Faz com que o texto central ocupe o espaço restante */
+    white-space: nowrap; /* Impede que quebre linhas */
+    overflow: hidden; /* Oculta o texto que não cabe na tela */
+    text-overflow: ellipsis; /* Mostra '...' caso o texto ultrapasse o limite */
+}
+
+/* Texto alinhado à direita */
+.texto-direita {
+    margin-right: 20px; /* Margem da direita para o centro da tela */
+    text-align: right;
+    white-space: nowrap; /* Evita que o texto quebre linhas */
+}
+
+/* Botão hambúrguer */
+.botao-hamburguer {
+    display: none; /* Exibido apenas em telas menores */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    margin: 0 20px; /* Espaçamento entre o hambúrguer, logo e botão azul */
+}
+
+/* Ocultar o menu em dispositivos menores */
+.menu-itens {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Padrão para telas grandes */
+}
+
+.menu-itens.mostrar {
+    display: flex; /* Exibe o menu */
+    flex-direction: column; /* Alinha os itens em uma lista vertical */
+    position: absolute;
+    top: 60px; /* Alinha o menu logo abaixo do cabeçalho */
+    left: 0;
+    width: 100%; /* Ocupa 100% da largura */
+    background-color: #FFFFFF;
+    padding: 10px;
+    z-index: 100; /* Garante que o menu esteja acima de outros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Resposividade amburguer*/
+@media screen and (max-width: 1078px) {
+    .botao-hamburguer {
+        display: block; /* Torna o botão visível em telas pequenas */
+    }
+
+    .menu-horizontal {
+        justify-content: space-between; /* Garante o alinhamento correto em telas menores */
+    }
+
+    .menu-itens {
+        display: none; /* Oculta o menu inicialmente */
+    }
+
+    .menu-itens.mostrar {
+        display: flex; /* Exibe o menu quando o hambúrguer for clicado */
+        flex-direction: column; /* Lista os itens verticalmente */
+        position: absolute;
+        top: 60px; /* Mantém o menu abaixo do cabeçalho */
+        left: 0;
+        width: 100%; /* Faz o menu ocupar toda a largura */
+        background-color: #FFFFFF;
+        padding: 10px;
+        z-index: 100; /* Garante que o menu não cubra o botão */
+    }
+
+    .menu-itens li {
+        text-align: center; /* Centraliza os itens no menu vertical */
+        margin: 10px 0; /* Espaçamento entre os itens */
+    }
+}
+
+
+
+
+/* Menu*/
+.menu-horizontal {
+    display: flex;
+    align-items: center; /* Alinha verticalmente todos os itens ao centro */
+    justify-content: space-between; /* Espaça o logo, botão hambúrguer e botão azul */
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    position: relative; /* Define o contexto para o botão hambúrguer */
+}
+
+.menu-horizontal .logo img {
+    height: 50px;
+}
+
+/* Ocultar os itens do menu e criar estilo para o botão mobile */
+.menu-horizontal ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite ajuste para telas pequenas */
+}
+
+.menu-horizontal ul li {
+    position: relative;
+}
+
+.menu-horizontal ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.menu-horizontal ul li a:hover,
+.menu-horizontal ul li .submenu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Menu dropdown responsivo */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    padding: 5px;
+    z-index: 100; /* Garante sobreposição */
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+}
+
+/* Ícones alinhados corretamente */
+.icones-menu img {
+    height: 25px;
+    margin-left: 10px;
+}
+
+/* Botão responsivo azul */
+.botao-azul {
+    background-color: #89D3D1;
+    color: white;
+    padding: var(--btn-padding, 10px 20px);
+    border: none;
+    border-radius: var(--btn-border-radius, 30px);
+    cursor: pointer;
+    font-size: var(--btn-font-size, 16px);
+    text-align: center;
+}
+
+.botao-azul:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 1078px) {
+    .menu-horizontal {
+        flex-wrap: wrap; /* Quebra a linha para ajustar melhor o layout */
+    }
+
+    .menu-horizontal ul {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        width: 100%; /* Ocupa toda a largura */
+        display: none; /* Oculta o menu por padrão */
+    }
+
+    .menu-horizontal ul.mostrar {
+        display: flex; /* Mostra o menu quando acionado */
+    }
+
+    .menu-horizontal ul li {
+        text-align: center; /* Centraliza os itens no menu vertical */
+    }
+
+    .botao-menu {
+        display: block; /* Mostra o botão mobile em telas pequenas */
+        background-color: #89D3D1;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .botao-menu:hover {
+        background-color: #0056b3;
+    }
+
+    /* Ícones do menu mobile */
+    .icones-menu {
+        display: none; /* Oculta os ícones em telas menores */
+    }
+}
+
+
+/* Imagem grande */
+.imagem-grande img {
+    width: 100%; /* Ocupa 100% da largura da tela */
+    height: var(--img-height, 592px); /* Altura fixa configurável */
+    max-width: 100%; /* Garante que a largura não ultrapasse os limites da tela */
+    object-fit: cover; /* Garante que a imagem preencha o espaço corretamente */
+    object-position: center; /* Centraliza o conteúdo da imagem */
+    --img-height: 592px;
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
