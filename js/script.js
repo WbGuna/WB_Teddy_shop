@@ -32,3 +32,41 @@ function toggleHamburgerMenu() {
     }
 }
 
+const pontos = document.querySelectorAll('.ponto');
+const carrossel = document.querySelector('.carrossel');
+let currentIndex = 0; // Índice atual do card ou posição visível
+
+// Função para atualizar a posição do carrossel
+function atualizarCarrossel(index, cardsVisiveis) {
+    const cardWidth = carrossel.offsetWidth / cardsVisiveis; // Divide pela quantidade de cards visíveis
+    const scrollPosition = index * cardWidth; // Calcula a posição baseada no índice
+    carrossel.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+    });
+
+    // Atualiza as bolinhas
+    pontos.forEach((p) => p.classList.remove('ativo'));
+    pontos[index].classList.add('ativo');
+}
+
+// Detecta a quantidade de cards visíveis com base no tamanho da tela
+function obterCardsVisiveis() {
+    return window.innerWidth > 768 ? 3 : 1; // 3 cards para telas grandes, 1 para pequenas
+}
+
+// Configura navegação manual com bolinhas
+pontos.forEach((ponto, index) => {
+    ponto.addEventListener('click', () => {
+        currentIndex = index; // Atualiza o índice atual
+        const cardsVisiveis = obterCardsVisiveis(); // Obtém o número de cards visíveis
+        atualizarCarrossel(currentIndex, cardsVisiveis);
+    });
+});
+
+// Reajusta a posição ao redimensionar a tela
+window.addEventListener('resize', () => {
+    const cardsVisiveis = obterCardsVisiveis(); // Obtém o número de cards visíveis
+    atualizarCarrossel(currentIndex, cardsVisiveis); // Garante que a posição fique alinhada ao redimensionar
+});
+

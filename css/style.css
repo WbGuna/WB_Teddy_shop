@@ -363,9 +363,6 @@ body {
 
 
 /***** Seção de Cards Menores *****/
-
-/***** Seção de Cards Menores *****/
-
 /* Configuração Geral da Seção */
 .cards-menores {
     text-align: center;
@@ -494,6 +491,97 @@ body {
 }
 
 
+/* carrossel*/
+.carrossel-servicos {
+    text-align: center;
+    padding: 20px;
+    background-color: #E1EEE8;
+}
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 71px;
+    margin-right: 23px;
+    gap: 5px; /* Espaçamento entre os cards */
+}
+
+.carrossel .card {
+    flex: 0 0 31.33%; /* Mostra 3 cards por vez */
+    background-color: white;
+    border: 3px solid #FFD700; /* Borda amarela */
+    border-radius: 40px; /* Cantos arredondados */
+    margin: 10px;
+    padding: 11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.carrossel .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.carrossel .card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.carrossel .card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.navegacao .ponto {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navegacao .ponto.ativo {
+    background-color: #333;
+}
+
+.carrossel-servicos img {
+    max-width: 100%; /* Faz com que a largura da imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da altura */
+    display: block; /* Remove espaços abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem no contêiner */
+}
+
+
+/* Responsividade: Apenas 1 card por vez em telas menores */
+@media (max-width: 768px) {
+    .carrossel {
+        gap: 10px; /* Reduz o espaço entre os cards */
+    }
+
+    .carrossel .card {
+        flex: 0 0 97%; /* Mostra 1 card por vez */
+        margin: 0 0px; /* Adiciona margem para centralizar */
+    
+    }
+}
+
+@media (max-width: 768px) {
+    .carrossel-servicos img {
+        max-width: 100%; /* Diminui a largura da imagem em dispositivos menores */
+        margin-bottom: 30px; /* Ajusta o espaçamento abaixo da imagem */
+    }
+}
 
 
 
