@@ -238,9 +238,6 @@ body {
 
 
 
-
-
-
 /* Imagem grande */
 .imagem-grande img {
     width: 100%; /* Ocupa 100% da largura da tela */
@@ -383,6 +380,17 @@ body {
     margin-right: auto; /* Centraliza horizontalmente */
 }
 
+.cards-menores_2 > img {
+    width: 100%; /* A imagem ocupa toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 60px; /* Espaçamento inferior */
+    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    display: block; /* Garante que a imagem seja tratada como bloco */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-top: -72px;
+}
+
 /* Título acima dos Cards Menores */
 .cards-menores h2 {
     font-size: 2rem; /* Tamanho do título */
@@ -459,6 +467,10 @@ body {
     box-shadow: 0px 0px 12px 5px rgba(255, 255, 255, 0.9); /* Intensifica a sombra no hover */
 }
 
+
+
+
+
 /* Responsividade dos Cards Menores */
 @media screen and (max-width: 768px) {
     .card-menor {
@@ -491,7 +503,7 @@ body {
 }
 
 
-/* carrossel*/
+/**** carrossel****/
 .carrossel-servicos {
     text-align: center;
     padding: 20px;
@@ -539,6 +551,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 50px; /* Aumenta a distância para o final da seção */
 }
 
 .navegacao .ponto {
@@ -583,6 +596,129 @@ body {
     }
 }
 
+
+/** Nova parte dos 3 Cards**/
+/* Seção geral */
+.sessao-cards_2 {
+    padding: 20px;
+    background-color: #F7F2EC;
+}
+
+.img-title_3 {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.container-cards_2 {
+    display: flex;
+    gap: 20px; /* Espaçamento entre o card maior e os menores */
+}
+
+/* Card maior */
+.card-maior_2 {
+    flex: 1; /* Ocupa metade da seção */
+    background-color: #fff;
+    border: 3px solid #FFD700; /* Borda dourada */
+    border-radius: 15px;
+    padding: 0; /* Remove padding interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 530px; /* Altura total do card maior */
+    display: flex;
+    flex-direction: column; /* Permite ajustar imagem e texto */
+}
+
+.card-maior_2 .img-card_2 {
+    width: 100%; /* Ocupa toda a largura */
+    height: 60%; /* A imagem ocupa 60% da altura */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorções */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.conteudo-maior_2 {
+    flex: 1;
+    padding: 10px; /* Espaço interno apenas para o texto */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.titulo-card_2 {
+    font-size: 26px; /* Tamanho maior para os títulos */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao-maior_2 {
+    color: #666;
+    font-size: 20px; /* Tamanho maior para as descrições */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.scopri_2 {
+    color: #BF8B70;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Cards menores */
+.cards-menores_2 {
+    flex: 1; /* Ocupa metade da seção */
+    display: flex;
+    flex-direction: column; /* Empilha os dois cards menores */
+    gap: 10px; /* Espaçamento entre os dois cards */
+}
+
+.card-menor_2 {
+    display: flex;
+    background-color: #fff;
+    border: 3px solid #FFD700; /* Borda dourada */
+    border-radius: 15px;
+    height: calc((530px - 10px) / 2); /* Altura proporcional para os dois cards (incluindo espaço entre eles) */
+    overflow: hidden; /* Garante que o conteúdo não extrapole os limites */
+}
+
+.card-menor_2 .img-card_2 {
+    width: 40%; /* A imagem ocupa 40% da largura do card */
+    height: 100%; /* A imagem ocupa toda a altura do card */
+    object-fit: cover; /* Exibe a imagem sem distorções */
+    border-top-left-radius: 12px; /* Arredonda o canto superior esquerdo */
+    border-bottom-left-radius: 12px; /* Arredonda o canto inferior esquerdo */
+}
+
+.conteudo-menor_2 {
+    flex: 1;
+    padding: 10px;
+    text-align: left; /* Texto alinhado à esquerda */
+}
+
+.descricao-menor_2 {
+    font-size: 20px; /* Tamanho maior */
+    line-height: 1.6;
+    color: #666;
+}
+
+.card-menor_2 .scopri_2 {
+    color: #BF8B70;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-cards_2 {
+        flex-direction: column;
+    }
+    .card-maior_2,
+    .card-menor_2 {
+        height: auto; /* Ajusta a altura automaticamente em telas menores */
+    }
+}
 
 
 
