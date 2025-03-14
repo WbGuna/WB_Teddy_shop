@@ -600,7 +600,7 @@ body {
 /** Nova parte dos 3 Cards**/
 /* Seção geral */
 .sessao-cards_2 {
-    padding: 20px;
+    padding: 90px;
     background-color: #F7F2EC;
 }
 
@@ -609,13 +609,14 @@ body {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    margin-top: 30px;
+    margin-top: -37px;
     margin-bottom: 50px;
 }
 
 .container-cards_2 {
     display: flex;
     gap: 20px; /* Espaçamento entre o card maior e os menores */
+    margin-right: -27px;
 }
 
 /* Card maior */
@@ -629,6 +630,7 @@ body {
     height: 530px; /* Altura total do card maior */
     display: flex;
     flex-direction: column; /* Permite ajustar imagem e texto */
+    margin-left: -16px;
 }
 
 .card-maior_2 .img-card_2 {
@@ -646,14 +648,14 @@ body {
 }
 
 .titulo-card_2 {
-    font-size: 26px; /* Tamanho maior para os títulos */
+    font-size: 20px; /* Texto maior */
     color: #333;
     margin-bottom: 10px;
 }
 
 .descricao-maior_2 {
     color: #666;
-    font-size: 20px; /* Tamanho maior para as descrições */
+    font-size: 16px; /* Texto mais legível */
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -683,13 +685,14 @@ body {
 }
 
 .card-menor_2 .img-card_2 {
-    width: 40%; /* A imagem ocupa 40% da largura do card */
-    height: 100%; /* A imagem ocupa toda a altura do card */
+    width: 40%; /* Ocupa 40% da largura em telas grandes */
+    height: 100%; /* Ocupa toda a altura em telas grandes */
     object-fit: cover; /* Exibe a imagem sem distorções */
     border-top-left-radius: 12px; /* Arredonda o canto superior esquerdo */
     border-bottom-left-radius: 12px; /* Arredonda o canto inferior esquerdo */
 }
 
+/* Conteúdo dos cards menores */
 .conteudo-menor_2 {
     flex: 1;
     padding: 10px;
@@ -697,7 +700,7 @@ body {
 }
 
 .descricao-menor_2 {
-    font-size: 20px; /* Tamanho maior */
+    font-size: 16px; /* Texto maior */
     line-height: 1.6;
     color: #666;
 }
@@ -712,11 +715,50 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .container-cards_2 {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os cards verticalmente */
     }
-    .card-maior_2,
+
+    /* Ajuste do card maior para telas menores */
+    .card-maior_2 {
+        margin-left: 0; /* Remove o deslocamento lateral */
+        height: auto; /* Ajusta altura automaticamente */
+    }
+
+    .card-maior_2 .img-card_2 {
+        width: 100%; /* Ocupa toda a largura */
+        height: auto; /* Ajusta a altura da imagem automaticamente */
+        object-fit: cover; /* Garante que a imagem seja exibida corretamente */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    /* Ajuste dos cards menores para telas menores */
     .card-menor_2 {
-        height: auto; /* Ajusta a altura automaticamente em telas menores */
+        flex-direction: column; /* Coloca a imagem no topo */
+        height: auto; /* Altura fluida para se ajustar ao conteúdo */
+    }
+
+    .card-menor_2 .img-card_2 {
+        width: 100%; /* A imagem ocupa toda a largura */
+        height: auto; /* Ajusta altura automaticamente */
+        object-fit: cover; /* Garante que a imagem apareça completamente sem cortes */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px; /* Bordas superiores arredondadas */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .conteudo-menor_2 {
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+        padding: 15px; /* Espaço interno apropriado */
+    }
+}
+
+@media (max-width: 768px) {
+    .img-title_3 {
+        max-width: 80%; /* Reduz ligeiramente a largura para telas menores */
+        min-width: 200px; /* Mantém um tamanho mínimo para não ficar pequena demais */
+        height: auto; /* Continua ajustando a altura automaticamente */
     }
 }
 
