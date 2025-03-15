@@ -1,3 +1,5 @@
+/* Função do menu principal */
+
 // Seleciona o link de "Categorie"
 const categorieLink = document.getElementById("categorie-link");
 const submenu = document.querySelector(".submenu");
@@ -21,6 +23,10 @@ categorieLink.addEventListener("click", (event) => {
     }
 });
 
+
+
+
+/* Função do menu amburguer */
 function toggleHamburgerMenu() {
     const menu = document.querySelector(".menu-itens"); // Seleciona o menu
     const isMenuOpen = menu.classList.contains("mostrar"); // Verifica se o menu está aberto
@@ -32,6 +38,8 @@ function toggleHamburgerMenu() {
     }
 }
 
+
+/* Função do primeiro carrossel */
 const pontos = document.querySelectorAll('.ponto');
 const carrossel = document.querySelector('.carrossel');
 let currentIndex = 0; // Índice atual do card ou posição visível
@@ -69,4 +77,54 @@ window.addEventListener('resize', () => {
     const cardsVisiveis = obterCardsVisiveis(); // Obtém o número de cards visíveis
     atualizarCarrossel(currentIndex, cardsVisiveis); // Garante que a posição fique alinhada ao redimensionar
 });
+
+
+/*Função do segundo carrossel */
+
+// Selecionar elementos específicos do Carrossel 2
+const pontos_2 = document.querySelectorAll('.ponto_2'); // Bolinhas do Carrossel 2
+const carrossel_2 = document.querySelector('.carrossel_2'); // Contêiner do Carrossel 2
+let currentIndex_2 = 0; // Índice inicial do card visível no Carrossel 2
+
+// Função para atualizar a posição do Carrossel 2
+function atualizarCarrossel_2(index, cardsVisiveis) {
+    const cardWidth = carrossel_2.offsetWidth / cardsVisiveis; // Divide a largura do contêiner pelo número de cards visíveis
+    const scrollPosition = index * cardWidth; // Calcula a posição do carrossel com base no índice
+
+    // Rolagem suave para a posição calculada
+    carrossel_2.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+    });
+
+    // Atualizar as bolinhas (ativa/desativa)
+    pontos_2.forEach((p) => p.classList.remove('ativo')); // Remove 'ativo' de todas as bolinhas
+    if (pontos_2[index]) pontos_2[index].classList.add('ativo'); // Adiciona 'ativo' à bolinha correspondente
+}
+
+// Função para detectar quantos cards estão visíveis
+function obterCardsVisiveis_2() {
+    return window.innerWidth > 768 ? 3 : 1; // 3 cards visíveis em telas grandes, 1 em telas pequenas
+}
+
+// Configurar eventos de clique nas bolinhas do Carrossel 2
+pontos_2.forEach((ponto, index) => {
+    ponto.addEventListener('click', () => {
+        currentIndex_2 = index; // Atualiza o índice atual
+        const cardsVisiveis = obterCardsVisiveis_2(); // Calcula a quantidade de cards visíveis
+        atualizarCarrossel_2(currentIndex_2, cardsVisiveis); // Move o carrossel para a posição correta
+    });
+});
+
+// Ajustar o carrossel ao redimensionar a tela
+window.addEventListener('resize', () => {
+    const cardsVisiveis = obterCardsVisiveis_2(); // Recalcula os cards visíveis
+    atualizarCarrossel_2(currentIndex_2, cardsVisiveis); // Realinha o carrossel
+});
+
+
+
+
+
+
 

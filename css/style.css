@@ -14,7 +14,7 @@ body {
 
 
 
-/* Barra rosa */
+/**** Inicio Barra rosa ******/
 .barra-rosa {
     background-color: #F0DACD;
     display: flex; /* Usamos flexbox para alinhar os elementos */
@@ -47,10 +47,11 @@ body {
     white-space: nowrap; /* Evita que o texto quebre linhas */
 }
 
+/**** Fim Barra rosa ******/
 
 
 
-/* Botão hambúrguer */
+/**** Inicio Botão hambúrguer ******/
 .botao-hamburguer {
     display: none; /* Exibido apenas em telas menores */
     background: none;
@@ -112,11 +113,10 @@ body {
         margin: 10px 0; /* Espaçamento entre os itens */
     }
 }
+/**** Fim Botão hambúrguer ******/
 
 
-
-
-/* Menu*/
+/**** Inicio MENU ******/
 .menu-horizontal {
     display: flex;
     align-items: center; /* Alinha verticalmente todos os itens ao centro */
@@ -235,10 +235,11 @@ body {
         display: none; /* Oculta os ícones em telas menores */
     }
 }
+/**** fIM  MENU ******/
 
 
 
-/* Imagem grande */
+/**** Inicio Imagem Folder ******/
 .imagem-grande img {
     width: 100%; /* Ocupa 100% da largura da tela */
     height: var(--img-height, 592px); /* Altura fixa configurável */
@@ -248,10 +249,10 @@ body {
     --img-height: 592px;
 }
 
+/**** Fim Imagem Folder ******/
 
 
-
-/***** Seção de Introdução antes dos cards *****/
+/***** Inicio Seção de Introdução antes dos cards *****/
 .introducao {
     text-align: center; /* Centraliza o texto */
     padding: 20px; /* Espaçamento interno */
@@ -296,7 +297,11 @@ body {
     }
 }
 
-/***** Cards de Pelúcia (Grandes) *****/
+/***** Fim Seção de Introdução antes dos cards *****/
+
+
+
+/***** Inicio Cards de Pelúcia (Grandes) *****/
 .container-maiores {
     display: flex; /* Exibe os cards lado a lado */
     flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
@@ -316,6 +321,7 @@ body {
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 25px;
 }
 
 .colecao img {
@@ -357,10 +363,13 @@ body {
     }
 }
 
+/**** Fim Cards de Pelúcia (Grandes) *****/
 
 
-/***** Seção de Cards Menores *****/
-/* Configuração Geral da Seção */
+
+
+
+/***** Inicio Seção de Cards Menores *****/
 .cards-menores {
     text-align: center;
     width: 100%; /* Ocupa toda a largura disponível */
@@ -468,9 +477,6 @@ body {
 }
 
 
-
-
-
 /* Responsividade dos Cards Menores */
 @media screen and (max-width: 768px) {
     .card-menor {
@@ -502,8 +508,12 @@ body {
     }
 }
 
+/***** Inicio Seção de Cards Menores *****/
 
-/**** carrossel****/
+
+
+
+/**** Inicio carrossel 1****/
 .carrossel-servicos {
     text-align: center;
     padding: 20px;
@@ -596,9 +606,11 @@ body {
     }
 }
 
+/**** Fim carrossel 1****/
 
-/** Nova parte dos 3 Cards**/
-/* Seção geral */
+
+
+/** Inicio Cards Horizontal e vertical **/
 .sessao-cards_2 {
     padding: 90px;
     background-color: #F7F2EC;
@@ -648,14 +660,14 @@ body {
 }
 
 .titulo-card_2 {
-    font-size: 20px; /* Texto maior */
+    font-size: 26px; /* Texto maior */
     color: #333;
     margin-bottom: 10px;
 }
 
 .descricao-maior_2 {
     color: #666;
-    font-size: 16px; /* Texto mais legível */
+    font-size: 20px; /* Texto mais legível */
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -700,7 +712,7 @@ body {
 }
 
 .descricao-menor_2 {
-    font-size: 16px; /* Texto maior */
+    font-size: 18px; /* Texto maior */
     line-height: 1.6;
     color: #666;
 }
@@ -756,11 +768,144 @@ body {
 
 @media (max-width: 768px) {
     .img-title_3 {
-        max-width: 80%; /* Reduz ligeiramente a largura para telas menores */
+        max-width: 100%; /* Reduz ligeiramente a largura para telas menores */
         min-width: 200px; /* Mantém um tamanho mínimo para não ficar pequena demais */
-        height: auto; /* Continua ajustando a altura automaticamente */
+        height: 25px; /* Continua ajustando a altura automaticamente */
     }
 }
+
+/** Inicio Cards Horizontal e vertical **/
+
+
+/**** Inicio carrossel 2****/
+.carrossel-servicos_2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #E1EEE8;
+}
+
+.carrossel_2 {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 71px;
+    margin-right: 23px;
+    gap: 5px; /* Espaçamento entre os cards */
+}
+
+.carrossel_2 .card {
+    flex: 0 0 31.33%; /* Mostra 3 cards por vez */
+    background-color: white;
+    border: 3px solid #FFD700; /* Borda amarela */
+    border-radius: 24px; /* Cantos arredondados */
+    margin: 10px;
+    padding: 11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.carrossel_2 .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    margin-bottom: -73px;
+}
+
+.carrossel_2 .card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.carrossel_2 .card p {
+    color: #666;
+    font-size: 17px;
+    text-align: left;
+}
+
+.navegacao_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px; /* Aumenta a distância para o final da seção */
+}
+
+.navegacao_2 .ponto_2 {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navegacao_2 .ponto_2.ativo {
+    background-color: #333;
+}
+
+.carrossel-servicos_2 img {
+    position: relative; /* Permite deslocar a imagem sem alterar o fluxo */
+    margin-top: -73px; /* Faz a imagem invadir a seção acima */
+    z-index: 1; /* Garante que a imagem fique acima de outros elementos */
+    max-width: 60%; /* Mantém a largura proporcional ao contêiner */
+}
+
+
+.imagem-texto_2 {
+    display: flex; /* Cria um layout em linha para a imagem e o texto */
+    align-items: center; /* Alinha verticalmente o texto e a imagem no centro */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    margin-top: 15px; /* Adiciona espaço entre o parágrafo e a imagem-texto */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.imagem-texto_2 img {
+    width: 60px; /* Tamanho da imagem circular */
+    height: 60px;
+    border-radius: 50%; /* Deixa a imagem circular */
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.imagem-texto_2 h3 {
+    margin: 0; /* Remove margens desnecessárias do título */
+    font-size: 18px; /* Ajusta o tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+.imagem-texto_2 p {
+    margin: 0; /* Remove margens desnecessárias */
+    font-size: 14px; /* Ajusta o tamanho do texto */
+    color: #666; /* Cor do texto */
+}
+
+
+/* Responsividade: Apenas 1 card por vez em telas menores */
+@media (max-width: 768px) {
+    .carrossel_2 {
+        gap: 10px; /* Reduz o espaço entre os cards */
+    }
+
+    .carrossel_2 .card {
+        flex: 0 0 97%; /* Mostra 1 card por vez */
+        margin: 0 0px; /* Adiciona margem para centralizar */
+    
+    }
+}
+
+@media (max-width: 768px) {
+    .carrossel-servicos_2 img {
+        margin-top: -46px; /* Reduz o deslocamento para telas menores */
+        max-width: 80%; /* Ajusta a largura da imagem em telas menores */
+        margin-bottom: 12px;
+    }
+}
+
+/**** Fim carrossel 2****/
+
+
+
+
 
 
 
