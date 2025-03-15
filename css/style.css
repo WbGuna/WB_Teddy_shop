@@ -904,17 +904,186 @@ body {
 /**** Fim carrossel 2****/
 
 
-
-
-
-
-
-
-/*footer*/
-footer {
-    text-align: center;
+/*** Inicio Footer***/
+.newsletter-section {
     padding: 20px;
-    background-color: #333;
+    background-color:#F0DACD;
+    font-family: Arial, sans-serif;
+}
+
+/* Título e conteúdo principal */
+.newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.newsletter-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.newsletter-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 82px;
+}
+
+.newsletter-text p {
+    font-size: 16px;
+    color: #666;
+    margin-left: 82px;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+    flex: 1;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: #BF8B70;
+    border: none;
+    border-radius: 0 5px 5px 0;
     color: white;
     font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 43px;
 }
+
+.newsletter-form button:hover {
+    background-color: #e6be00;
+}
+
+/* Linha dourada de separação */
+.gold-divider {
+    height: 3px;
+    background-color: #FFD700;
+    margin: 20px 0;
+    margin-left: 80px;
+    margin-right: 42px;
+}
+
+/* Footer-like menu */
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #F0DACD;
+    ; /* Cor sólida de fundo (exemplo: preto) */
+    padding: 20px; /* Adiciona espaçamento interno */
+    color: white; /* Define a cor do texto dentro do footer */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin-left: 70px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666666;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .newsletter-form input[type="email"] {
+        flex: none;
+        width: 70%;
+    }
+
+    .newsletter-form button {
+        width: 30%;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+}
+/*** Fim Footer***/
+
+
+/*** Inicio Estilo do rodapé ***/
+.footer-final {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens para as extremidades */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    padding: 20px; /* Espaçamento interno */
+    background-color: white; /* Cor de fundo do rodapé */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    border-top: 3px solid #F0DACD; /* Linha dourada na parte superior */
+}
+
+/* Estilo da imagem à esquerda */
+.footer-left img {
+    max-width: 100px; /* Ajusta o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Estilo do texto à direita */
+.footer-right p {
+    font-size: 14px; /* Tamanho do texto */
+    color: #666; /* Cor do texto */
+    margin: 0; /* Remove margens extras */
+    text-align: right; /* Garante alinhamento à direita */
+}
+
+@media (max-width: 768px) {
+    .footer-final {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .footer-left img {
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo da imagem */
+    }
+}
+/*** Fim Estilo do rodapé ***/

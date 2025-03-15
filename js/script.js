@@ -123,8 +123,24 @@ window.addEventListener('resize', () => {
 });
 
 
+/* Validação do campo email */
+const emailInput = document.querySelector('.newsletter-form input[type="email"]');
+const subscribeButton = document.querySelector('.newsletter-form button');
 
+// Função para validar o formato do email
+function validarEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular para verificar formato do email
+    return regex.test(email); // Retorna true se o formato estiver correto
+}
 
-
-
-
+// Evento de clique no botão de inscrição
+subscribeButton.addEventListener('click', (event) => {
+    const emailValue = emailInput.value.trim(); // Remove espaços em branco
+    if (!validarEmail(emailValue)) {
+        alert('Por favor, insira um email válido.'); // Mensagem de erro
+        emailInput.focus(); // Foca no campo de email para correção
+    } else {
+        alert('Inscrição realizada com sucesso!'); 
+        // Aqui você pode adicionar a lógica para enviar o email ao servidor
+    }
+});
