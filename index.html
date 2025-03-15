@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout da Página</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Inicio Barra Rosa -->
+    <div class="barra-rosa">
+        <span class="texto-esquerda">Hai bisogno di aiuto?</span>
+        <span class="texto-centralizado">Ottieni subito uno sconto del 10%:Iscriviti alla newsletter</span>
+        <span class="texto-direita">Informazioni di consegna</span>
+    </div>    
+    <!-- Fim Barra Rosa -->
+
+    <!--  Inicio Menu com imagem, dropdown e ícones -->
+    <header>
+        <nav class="menu-horizontal">
+            <div class="logo">
+                <img src="assets/image/logo.png" alt="Logo">
+            </div>
+            <!-- Botão hambúrguer para dispositivos móveis -->
+            <button class="botao-hamburguer" onclick="toggleHamburgerMenu()">☰</button>
+            <ul class="menu-itens">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#categorie" id="categorie-link">Categorie <span class="toggle-icon">\/</span></a>
+                    <ul class="submenu">
+                        <li><a href="#sub2">Fofinho</a></li>
+                        <li><a href="#sub1">Fofo</a></li>
+                        <li><a href="#sub3">Fofão</a></li>
+                    </ul>
+                </li>
+                <li><a href="#novita">Novità</a></li>
+                <li><a href="#marchi">Marchi</a></li>
+                <li><a href="#carte-regalo">Carte Regalo</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+            </ul>
+            <div class="icones-menu">
+                <img src="assets/image/icones.png" alt="Pesquisar">
+            </div>
+            <button class="botao-azul">Acquista ora</button>
+        </nav>
+    </header>
+    <!--  Fim Menu com imagem, dropdown e ícones -->
+
+    <!-- Inicio Imagem grande -->
+    <section class="imagem-grande">
+        <img src="assets/image/img_2.jpeg" alt="Imagem grande" style="--img-height: 592px; margin-bottom: -8px;">
+    </section>
+    <!-- Fim Imagem grande -->
+
+
+    <!-- Inicio Conteúdo dos cards -->
+    <section class="colecoes-pelucia">
+        <div class="introducao">
+            <h1>Esplora E Trova Il Tuo Preferito Su TeddyShop</h1>
+            <p>Siamo felici di presentare la nostra varietà di nuovi personaggi di peluche! Scopri la collezione, pronta per essere amata, regalata o diventare il tuo nuovo migliore amico.</p>
+        </div>
+        <!-- Container para os cards maiores -->
+        <div class="container-maiores">
+            <div class="colecao">
+                <img src="assets/image/urso_1.png" alt="Fantasy Friends">
+                <h3>Fantasy Friends</h3>
+                <p>Collezione di peluche mitici e fantastici: Perfetti per sognare ad occhi aperti.</p>
+            </div>
+            <div class="colecao">
+                <img src="assets/image/urso_2.png" alt="Vintage Treasures">
+                <h3>Vintage Treasures</h3>
+                <p>Collezione retrò, peluche tradizionali e storici, per un tocco di nostalgia.</p>
+            </div>
+            <div class="colecao">
+                <img src="assets/image/urso_3.png" alt="Wild Adventures">
+                <h3>Wild Adventures</h3>
+                <p>In Questa collezione troverai peluche di animali esotici per tutti tipi di avventure.</p>
+            </div>
+        </div>
+        
+        <!-- Cards menores -->
+        <div class="cards-menores">
+            <img src="assets/image/flor_1.png" alt="Trixy" style="margin-bottom: 60px;">
+            <div class="grid-cards">
+                <div class="card-menor">
+                    <img src="assets/image/urso_4.png" alt="Teddy">
+                    <h3>Teddy</h3>
+                    <p>10.5 Orso</p>
+                    <p class="price">R$ 24</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_5.png" alt="Trixy">
+                    <h3>Trixy</h3>
+                    <p>8.5 Tricerapoto</p>
+                    <p class="price">R$ 30</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_6.png" alt="Bunny">
+                    <h3>Bunny</h3>
+                    <p>10.5 Coniglio</p>
+                    <p class="price">R$ 25</p>
+                    <span class="rating">★★★★½</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_7.png" alt="Gigi">
+                    <h3>Gigi</h3>
+                    <p>12.5 Giraffa</p>
+                    <p class="price">R$ 30</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+            </div>
+            <button class="btn-explore">Esplora Adesso</button>
+        </div>
+    </section>
+    <!-- Fim Conteúdo dos cards -->
+
+    <!-- Inicio Carrosel 1 -->
+    <section class="carrossel-servicos">
+        <img src="assets/image/img_carrossel_1.png" alt="Trixy">
+        <div class="carrossel">
+            <div class="card" id="card-1">
+                <img src="assets/image/img_carrossel_2.png" alt="Spedizioni Sicure" style="margin-top: 3px; width: 78px;">
+                <h3>Spedizioni Sicure</h3>
+                <p>Offriamo consegne rapide per garantirti che il tuo peluche arrivi a destinazione in perfette condizioni.</p>
+            </div>
+            <div class="card" id="card-2">
+                <img src="assets/image/img_carrossel_3.png" alt="Materiali di Qualità" style="margin-top: 3px; width: 70px;">
+                <h3>Materiali di Qualità</h3>
+                <p>Siamo impegnati a utilizzare materiali di qualità per i nostri peluche, per garantirti un prodotto che durerà nel tempo.</p>
+            </div>
+            <div class="card" id="card-3">
+                <img src="assets/image/img_carrossel_4.png" alt="Servizio Eccellente" style="margin-top: 3px; width: 68px;">
+                <h3>Servizio Eccellente</h3>
+                <p>La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.</p>
+            </div>
+            <div class="card" id="card-4">
+                <img src="assets/image/img_carrossel_3.png" alt="Personalizzazione" style="margin-top: 3px; width: 78px;">
+                <h3>Personalizzazione</h3>
+                <p>Offriamo opzioni per personalizzare i peluche e renderli davvero speciali!</p>
+            </div>
+            <div class="card" id="card-5">
+                <img src="assets/image/img_carrossel_4.png" alt="Servizio Eccellente" style="margin-top: 3px; width: 68px;">
+                <h3>Servizio Eccellente</h3>
+                <p>La nostra assistenza clienti è a tua disposizione per rispondere a tutte le tue domande e risolvere qualsiasi problema.</p>
+            </div>
+            <div class="card" id="card-6">
+                <img src="assets/image/img_carrossel_3.png" alt="Materiali di Qualità" style="margin-top: 3px; width: 70px;">
+                <h3>Materiali di Qualità</h3>
+                <p>Siamo impegnati a utilizzare materiali di qualità per i nostri peluche, per garantirti un prodotto che durerà nel tempo.</p>
+            </div>
+        </div>
+        <div class="navegacao">
+            <span class="ponto ativo" data-target="1"></span>
+            <span class="ponto" data-target="2"></span>
+            <span class="ponto" data-target="3"></span>
+            <span class="ponto" data-target="4"></span>
+        </div>
+    </section>
+    <!-- Fim Carrosel 1 -->
+
+    <!-- Inicio Conteúdo dos cards_2 -->
+    <section class="colecoes-pelucia">     
+        <!-- Cards menores_2 -->
+        <div class="cards-menores">
+            <img src="assets/image/img_title_2.png" alt="Aria_2" style="margin-top: -72px;">
+            <div class="grid-cards">
+                <div class="card-menor">
+                    <img src="assets/image/urso_8.png" alt="Aria">
+                    <h3>Aria</h3>
+                    <p>11.5 Farfalha</p>
+                    <p class="price">R$ 35</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_9.png" alt="Blaze">
+                    <h3>Blaze</h3>
+                    <p>13.5 Drago</p>
+                    <p class="price">R$ 30</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_10.png" alt="Clover">
+                    <h3>Clover</h3>
+                    <p>10.5 Lepre</p>
+                    <p class="price">R$ 25</p>
+                    <span class="rating">★★★★½</span>
+                </div>
+                <div class="card-menor">
+                    <img src="assets/image/urso_11.png" alt="Jumbo">
+                    <h3>Jumbo</h3>
+                    <p>10.5 Elefante</p>
+                    <p class="price">R$ 25</p>
+                    <span class="rating">★★★★☆</span>
+                </div>
+            </div>
+            <button class="btn-explore">Esplora Adesso</button>
+        </div>        
+    </section>
+    <!-- Fim Conteúdo dos cards_2 -->
+    
+
+    <!-- Inicio Conteúdo dos cards horizontal e vertical -->
+    <section class="sessao-cards_2">
+        <img src="assets/image/img_title_3.png" alt="Aggiungi Un Tocco Speciale Al Tuo Peluche" class="img-title_3">
+        <div class="container-cards_2">           
+            <!-- Card maior na esquerda -->
+            <div class="card-maior_2">
+                <img src="assets/image/card_vertical_1.png" alt="Card Maior" class="img-card_2">
+                <div class="conteudo-maior_2">
+                    <h3 class="titulo-card_2">Regala un sorriso con la nostra Gift Card</h3>
+                    <p class="descricao-maior_2">
+                        Vuoi fare un regalo ma non sai cosa scegliere? La nostra Gift Card è la soluzione perfetta! Con essa, il destinatario potrà scegliere il peluche che preferisce tra la nostra vasta selezione.
+                    </p>
+                    <p class="scopri_2">Scopri di più ></p>
+                </div>
+            </div>
+            <!-- Dois cards menores na direita -->
+            <div class="cards-menores_2">
+                <div class="card-menor_2">
+                    <img src="assets/image/card_horizontal_1.png" alt="Card Menor 1" class="img-card_2">
+                    <div class="conteudo-menor_2">
+                        <h3 class="titulo-card_2">Le offerte speciali della settimana</h3>
+                        <p class="descricao-menor_2">
+                            Dai un'occhiata alle nostre offerte speciali! Troverai sconti imperdibili su alcuni dei nostri peluche più popolari.
+                        </p>
+                        <p class="scopri_2">Scopri di più ></p>
+                    </div>
+                </div>
+                <div class="card-menor_2">
+                    <img src="assets/image/card_horizontal_2.png" alt="Card Menor 2" class="img-card_2">
+                    <div class="conteudo-menor_2">
+                        <h3 class="titulo-card_2">Personalizza il tuo peluche con noi</h3>
+                        <p class="descricao-menor_2">
+                            Vuoi rendere il tuo peluche ancora più speciale? Personalizzalo con il nome o la data!
+                        </p>
+                        <p class="scopri_2">Scopri di più ></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Conteúdo dos cards horizontal e vertical -->
+
+
+    <!-- Inicio  Conjunto de cards  informativos -->
+    <section class="carrossel-servicos_2">
+        <img src="assets/image/title_car_2.png" alt="Trixy">
+        <div class="carrossel_2">
+
+            <!-- Card 1 -->
+            <div class="card">
+                <p>"Questo peluche è fantastico! La qualità del materiale è eccezionale e la sua morbidezza lo rende perfetto per abbracciare."</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_1.png" alt="Maria Cipollari">
+                    <div>
+                        <h3>Maria Cipollari</h3>
+                        <p>Casalinga, mamma</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <p>"Non sono soddisfatto di questo peluche. Il materiale sembra economico e la cucitura è piuttosto approssimativa."</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_2.png" alt="Claudio Boldi">
+                    <div>
+                        <h3>Claudio Boldi</h3>
+                        <p>Operaio, genitore</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <p>"Il peluche stesso è di alta qualità, con dettagli ben curati e una consistenza morbida e soffice. Consiglio vivamente questo negozio!"</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_3.png" alt="Jessica Merla">
+                    <div>
+                        <h3>Jessica Merla</h3>
+                        <p>Pensionata, nonna</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <p>"Questo peluche è fantastico! La qualità del materiale è eccezionale e la sua morbidezza lo rende perfetto per abbracciare."</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_1.png" alt="Maria Cipollari">
+                    <div>
+                        <h3>Maria Cipollari</h3>
+                        <p>Casalinga, mamma</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <p>"Non sono soddisfatto di questo peluche. Il materiale sembra economico e la cucitura è piuttosto approssimativa."</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_2.png" alt="Claudio Boldi">
+                    <div>
+                        <h3>Claudio Boldi</h3>
+                        <p>Operaio, genitore</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <p>"Il peluche stesso è di alta qualità, con dettagli ben curati e una consistenza morbida e soffice. Consiglio vivamente questo negozio!"</p>
+                <div class="imagem-texto_2">
+                    <img src="assets/image/car_2_img_3.png" alt="Jessica Merla">
+                    <div>
+                        <h3>Jessica Merla</h3>
+                        <p>Pensionata, nonna</p>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="navegacao_2">
+            <span class="ponto_2 ativo" data-target="1"></span>
+            <span class="ponto_2" data-target="2"></span>
+            <span class="ponto_2" data-target="3"></span>
+            <span class="ponto_2" data-target="4"></span>
+        </div>
+    </section>
+    <!-- Fim  Conjunto de cards  informativos -->
+
+
+    <!-- Inicio Footer -->
+    <section class="newsletter-section">
+        <!-- Título e conteúdo principal -->
+        <div class="newsletter-container">
+            <div class="newsletter-text">
+                <h2>TeddyShop Newsletter</h2>
+                <p>Resta aggiornato sulle ultime novità, promozioni e offerte speciali.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Inserisci la tua email" aria-label="Email">
+                <button type="button">Iscriviti adesso</button>
+            </div>
+        </div>
+    
+        <!-- Linha dourada de separação -->
+        <div class="gold-divider"></div>
+    
+        <!-- Footer-like menu -->
+        <footer class="footer-menu">
+            <div class="footer-column">
+                <h3>Per aiutare</h3>
+                <ul>
+                    <li><a href="#">Consegna</a></li>
+                    <li><a href="#">Ritorno</a></li>
+                    <li><a href="#">Domande frequenti</a></li>
+                    <li><a href="#">Pagamento sicuro</a></li>
+                    <li><a href="#">Privacy e sicurezza</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Chi siamo</h3>
+                <ul>
+                    <li><a href="#">La nostra storia</a></li>
+                    <li><a href="#">Sicurezza e idoneità</a></li>
+                    <li><a href="#">Generali T & C</a></li>
+                    <li><a href="#">Commercio equo</a></li>
+                    <li><a href="#">Mappa del sito</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Commercio</h3>
+                <ul>
+                    <li><a href="#">Rivenditori esterni</a></li>
+                    <li><a href="#">Diventa un rivenditore</a></li>
+                    <li><a href="#">Fiere e Convegni</a></li>
+                    <li><a href="#">Termini e condizioni</a></li>
+                    <li><a href="#">Pubbliche relazioni</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Supporto</h3>
+                <ul>
+                    <li><a href="#">Il mio conto</a></li>
+                    <li><a href="#">Contattaci</a></li>
+                    <li><a href="#">Spedizione</a></li>
+                    <li><a href="#">Spedizione estiva</a></li>
+                    <li><a href="#">Richiamare</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+    <!-- Inicio Footer -->
+    
+    <!-- inicio Rodape -->
+    <footer class="footer-final">
+        <div class="footer-left">
+            <img src="assets/image/logo.png" alt="TeddyShop Logo">
+        </div>
+        <div class="footer-right">
+            <p>© 2023 TeddyShop. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+    <!-- Fim Rodape -->
+     
+    <!-- Chamada do arquivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
